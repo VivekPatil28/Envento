@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-xxl ">
+    <!-- row-cols-1 row-cols-sm-3 row-cols-md-4 g-4 -->
+    <div class="row">
+        {% for i in products %}
+        <div class="col col-sm-6 col-lg-4 col-xl-3 my-3 ">
+            <div class="card shadow-sm" style="min-height:200px;">
+                <div class="mt-3">
+                    <div style="display:grid;place-items: center;">
+                        <img class="" style="width:170px;height:170px;object-fit:contain;" src='/media/{{i.image}}' />
+                    </div>
+                </div>
+                <div class="card-body pt-xl-3 pt-md-1">
+                    <p class="card-text p-0 m-0">
+                    <div>
+                        <div
+                            style="text-decoration: none;text-align:center;">{{i.name|truncatechars:100}}
+                        </div>
+
+                        <div class="text-center">
+                            <span class="text-bg-primary" style="border-radius:5px;padding:2px 8px;font-size: 12px;margin-top:15px;display: inline-block;">downloads ({{i.downloads}})
+                                <small style="position:relative;top: -1px;left:4px;font-size:9px;"   class="bi bi-star-fill"></small></span>
+                        </div>
+                    </div>
+                    </p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group w-100">
+                            <a href="{{i.url}}" target="_blank" class="btn btn-success btn-lg">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+{% endblock body %}

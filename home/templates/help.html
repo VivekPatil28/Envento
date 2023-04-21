@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block body %}
+{% load static %}
+<div class="container mt-5">
+ <h1 class="text-center my-5">Help</h1>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Getting Started</h5>
+          <p class="card-text">If you're new to our software, check out our Getting Started guide for a quick overview of its features and how to use them.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Troubleshooting</h5>
+          <p class="card-text">If you're experiencing any issues with our software, try these troubleshooting steps:</p>
+          <ul class="card-list">
+            <li>Check that your computer meets the system requirements for our software.</li>
+            <li>Make sure you have the latest version of our software installed.</li>
+            <li>Restart your computer and try running our software again.</li>
+            <li>Contact our support team for further assistance.</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Contact Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Contact Us</h5>
+          <p class="card-text">If you have any questions or concerns, please don't hesitate to contact our support team.</p>
+          <ul class="card-list">
+            <li>Email: support@yourcompany.com</li>
+            <li>Phone: 555-1234</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock body %}
